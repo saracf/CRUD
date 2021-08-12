@@ -16,9 +16,10 @@
                         @endif
 
                         <h1>Lista de usuários</h1>
-                            @foreach( $usuarios as $u)
-                                <p>{{$u-> name}} | {{$u-> email}}</p>
-                            @endforeach
+                        <form>
+                            <div=class"form-grup>
+                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
