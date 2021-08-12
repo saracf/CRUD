@@ -10,6 +10,4 @@ Route::get ('/usuarios', [\App\Http\Controllers\HomeController::class,'index']);
 Route::post('/usuarios', [\App\Http\Controllers\UsuariosController::class,'add']);
 
 
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
