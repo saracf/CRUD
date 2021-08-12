@@ -14,8 +14,7 @@
                         </div>
                     @endif
 
-                    <h1>Seja Bem-vindo!</h1>
-                    <a href="{{route('usuarios.lista')}}">Lista dos Usuários</a>
+                    {{ __('You are logged in!') }}
                 </div>
             </div>
         </div>
