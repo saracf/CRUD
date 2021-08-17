@@ -18,23 +18,23 @@ class UsuariosController extends Controller
         return view('Usuarios.Form');
     }
     public function add( Request $request){
-        $usuario = new Usuario;
+        $usuario = new User;
         $usuario = $usuario->create( $request->all());
         return Redirect::to('/usuarios');
     }
     public function edit( $id ){
-        $usuario = Usuario::findOrFaill( $id );
-        return view('Usuarios.Form', ['usuarios' => $usuario]);
+        $usuario = User::findOrFail( $id );
+        return view('Usuarios.Form', ['usuario' => $usuario]);
     }
     public function update( $id, Request $request){
-        $usuario = Usuario::findOrFaill( $id );
-        $usuario ->Update( $request->all() );
+        $usuario = User::findOrFail( $id );
+        $usuario ->Update( $request->all());
         \Session::flash('msg_update', 'Atualizado com sucesso!' );
-        return Redirect::to('usuarios.list');
+        return Redirect::to('usuarios/lista');
     }
     public function delete( $id ){
-        $usuario = Usuario::findOrFaill( $id );
+        $usuario = User::findOrFail( $id );
         $usuario ->delete();
-        return Redirect::to('usuarios.list');
+        return Redirect::to('usuarios/lista');
     }
 }

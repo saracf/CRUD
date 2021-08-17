@@ -31,12 +31,12 @@
                             <tr>
                                     <th scope="row">{{ $u->id }}</th>
                                     <td>{{ $u->name }}</td>
-                                    <td>{{ $u->name }}</td>
+                                    <td>{{ $u->email }}</td>
                                     <td>
-                                        <buttom href="usuarios/{{ $u->id }}/edit" class="btn btn-info">Editar</buttom>
+                                        <a href="{{ $u->id }}/edit" class="btn btn-info">Editar</a>
                                     </td>
                                     <td>
-                                        <form action="usuarios/delete/{{ $u->id }}" method="post">
+                                        <form action="delete/{{ $u->id }}" method="post">
                                         @csrf
                                         @method('delete')
                                         <button class="btn btn-danger">Deletar</button>

@@ -16,14 +16,13 @@
                                 {{ session('status') }}
                             </div>
                         @endif
-                        // aaaaaaaaaa
                         @if (Request:: is('*/edit'))
                             <form action="{{ url('usuarios/update')}}/{{ $usuario->id }}" method="post">
                         @csrf
-                            <div=class"form-grup">
+                            <div class="form-group">
                                 <label for="exampleInputEmail1">Nome:</label>
                                 <input type="text" name="name" class="form-control" value="{{ $usuario->name }}">
-                            <</div>
+                            </div>
 
                             <div class="form-group">
                                 <label for="exempleInputEmail1">E-mail</label>
@@ -31,17 +30,14 @@
                             </div>
                             <button type="submit" class="btn btn-primary">Cadastrar</button>
                         </form>
-                    @else
-
-
-                        // aaaaaaaaaa
+                        @else
                         <h1>Lista de usuários</h1>
                         <form action="{{ url('usuarios/add')}}" method="post">
                         @csrf
                             <div=class"form-grup">
                                 <label for="exampleInputEmail1">Nome:</label>
                                 <input type="text" name="name" class="form-control">
-                            <</div>
+                            </div>
 
                             <div class="form-group">
                                 <label for="exempleInputEmail1">E-mail</label>
@@ -49,6 +45,7 @@
                             </div>
                             <button type="submit" class="btn btn-primary">Cadastrar</button>
                         </form>
+                    @endif
                     </div>
                 </div>
             </div>
