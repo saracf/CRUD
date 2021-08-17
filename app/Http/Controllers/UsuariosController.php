@@ -12,7 +12,7 @@ class UsuariosController extends Controller
 {
     public function index (){
         $usuarios = User::get();
-        return view(    'Usuarios.list', compact('usuarios'));
+        return view( 'Usuarios.list', ['usuarios' => $usuarios]);
     }
     public function new (){
         return view('Usuarios.Form');
@@ -28,13 +28,13 @@ class UsuariosController extends Controller
     }
     public function update( $id, Request $request){
         $usuario = Usuario::findOrFaill( $id );
-        $usuario ->Update( $request->all());
+        $usuario ->Update( $request->all() );
         \Session::flash('msg_update', 'Atualizado com sucesso!' );
-        return Redirect::to('/usuarios');
+        return Redirect::to('usuarios.list');
     }
     public function delete( $id ){
         $usuario = Usuario::findOrFaill( $id );
         $usuario ->delete();
-        return Redirect::to('/usuarios');
+        return Redirect::to('usuarios.list');
     }
 }

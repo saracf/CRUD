@@ -28,25 +28,26 @@
                              </thead>
                             <tbody>
                             @foreach( $usuarios as $u)
-
-                                <tr>
+                            <tr>
                                     <th scope="row">{{ $u->id }}</th>
                                     <td>{{ $u->name }}</td>
                                     <td>{{ $u->name }}</td>
                                     <td>
-                                        <a href="usuarios/{{ $u->id }}/edit" class="btn btn-info">Editar</a>
+                                        <buttom href="usuarios/{{ $u->id }}/edit" class="btn btn-info">Editar</buttom>
                                     </td>
                                     <td>
-                                        <form action="usuarios/delete/{{ $u->id }}" method="post"></form>
+                                        <form action="usuarios/delete/{{ $u->id }}" method="post">
                                         @csrf
                                         @method('delete')
                                         <button class="btn btn-danger">Deletar</button>
+                                        </form>
                                     </td>
-                                </tr>
+                            </tr>
 
                             @endforeach
                             </tbody>
                         </table>
+                        <a class="btn btn-primary" href="{{ url('home') }}" role="button">Voltar</a>
                     </div>
                 </div>
             </div>

@@ -9,8 +9,8 @@ Route::get('/usuarios/lista', [\App\Http\Controllers\UsuariosController::class,'
 Route::get ('/usuarios', [\App\Http\Controllers\HomeController::class,'index'])->middleware('auth');
 Route::post('/usuarios', [\App\Http\Controllers\UsuariosController::class,'add'])->middleware('auth');
 Route::get('usuarios/{id}/edit', [\App\Http\Controllers\UsuariosController::class,'edit'])->middleware('auth');
-Route::post('usuarios/update/{id}', [\App\Http\Controllers\UsuariosController::class,'update'])->middleware('auth');
-Route::delete('usuarios/delete/{id}', [\App\Http\Controllers\UsuariosController::class,'delete'])->middleware('auth');
+Route::post('/usuarios/update/{id}', [\App\Http\Controllers\UsuariosController::class,'update']);
+Route::delete('usuarios/delete/{id}', [\App\Http\Controllers\UsuariosController::class,'delete']);
 
 
 
