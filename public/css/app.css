@@ -4345,7 +4345,7 @@ input[type=button].btn-block {
 }
 
 .card {
-  position: relative;
+  position: lef;
   display: flex;
   flex-direction: column;
   min-width: 0;
@@ -4354,6 +4354,7 @@ input[type=button].btn-block {
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
+
 }
 .card > hr {
   margin-right: 0;
