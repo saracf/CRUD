@@ -68,7 +68,7 @@ body {
   line-height: 1.6;
   color: #212529;
   text-align: left;
-  background-color: #f8fafc;
+  background-color: #A3C9D9;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -1971,11 +1971,10 @@ pre code {
   font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.6;
-  color: #495057;
+  color: rgba(73, 80, 87, 0.53);
   background-color: #fff;
   background-clip: padding-box;
-  /*border: 1px solid #ced4da;*/
-  border-radius: 0.25rem;
+  border-radius: 20px;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -2406,7 +2405,7 @@ textarea.form-control {
   font-weight: 400;
   color: #212529;
   text-align: center;
-  vertical-align: middle;
+  vertical-align: center;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -2416,7 +2415,7 @@ textarea.form-control {
   padding: 0.375rem 0.75rem;
   font-size: 0.9rem;
   line-height: 1.6;
-  border-radius: 0.25rem;
+  border-radius: 20px;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -2532,15 +2531,14 @@ fieldset:disabled a.btn {
 .btn-success:not(:disabled):not(.disabled):active:focus, .btn-success:not(:disabled):not(.disabled).active:focus, .show > .btn-success.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(86, 202, 135, 0.5);
 }
-
 .btn-info {
-  color: #212529;
-  background-color: #6cb2eb;
-  border-color: #6cb2eb;
+  color: #f8f9fa;
+  background-color: #2C6C73;
+  border-color: #2C6C73;
 }
 .btn-info:hover {
   color: #fff;
-  background-color: #4aa0e6;
+  background-color: #1E3E59;
   border-color: #3f9ae5;
 }
 .btn-info:focus, .btn-info.focus {
@@ -2595,8 +2593,8 @@ fieldset:disabled a.btn {
 
 .btn-danger {
   color: #fff;
-  background-color: #e3342f;
-  border-color: #e3342f;
+  background-color: #1E3E59;
+  border-color: #1E3E59;
 }
 .btn-danger:hover {
   color: #fff;
@@ -4350,9 +4348,9 @@ input[type=button].btn-block {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
+  background-color: ;
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 1px solid rgba(0, 0, 0, 0);
   border-radius: 0.25rem;
 
 }
@@ -4401,6 +4399,7 @@ input[type=button].btn-block {
 .card-link:hover {
   text-decoration: none;
 }
+
 .card-link + .card-link {
   margin-left: 1.25rem;
 }
@@ -4408,8 +4407,8 @@ input[type=button].btn-block {
 .card-header {
   padding: 0.75rem 1.25rem;
   margin-bottom: 0;
-  background-color: rgba(0, 0, 0, 0.03);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  background-color: rgba(0, 0, 0, 0);
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
 }
 .card-header:first-child {
   border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
