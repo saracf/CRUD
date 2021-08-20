@@ -18,7 +18,7 @@
                         <h1>Lista de usuários</h1>
                         <table class="table">
                             <tr>
-                                <th scope="col">#</th>
+                                <th scope="col">@</th>
                                 <th scope="col">Nome</th>
                                 <th scope="col">E-mail</th>
                                 <th scope="col">Editar</th>
