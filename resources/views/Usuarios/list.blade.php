@@ -16,19 +16,16 @@
                             </div>
                         @endif
                         <h1>Lista de usuários</h1>
-
                         <table class="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Nome</th>
-                                    <th scope="col">E-mail</th>
-                                    <th scope="col">Editar</th>
-                                    <th scope="col">Deletar</th>
-                                </tr>
-                             </thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">E-mail</th>
+                                <th scope="col">Editar</th>
+                                <th scope="col">Deletar</th>
+                            </tr>
                             <tbody>
-                            @foreach( $usuarios as $u)
+                                @foreach( $usuarios as $u)
                             <tr>
                                     <th scope="row">{{ $u->id }}</th>
                                     <td>{{ $u->name }}</td>
@@ -44,8 +41,7 @@
                                         </form>
                                     </td>
                             </tr>
-
-                            @endforeach
+                                @endforeach
                             </tbody>
                         </table>
                         <a class="btn btn-primary" href="{{ url('home') }}" role="button">Voltar</a>
